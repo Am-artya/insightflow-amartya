@@ -1,7 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { BarChart3, TrendingUp, Database, Brain } from "lucide-react";
-import profilePhoto from "@/assets/profile-photo.jpg";
+import Amartya from "@/assets/Amartya.jpg";
 
 const About = () => {
   const highlights = [
@@ -41,14 +41,14 @@ const About = () => {
           {/* Profile Photo Section */}
           <div className="lg:col-span-1 flex justify-center slide-up">
             <div className="relative">
-              <Avatar className="w-64 h-64 border-4 border-primary/20 shadow-2xl">
-                <AvatarImage src={profilePhoto} alt="Amartya Sen - Data Analyst" className="object-cover" />
+              <Avatar className="w-48 h-48 sm:w-56 md:w-64 border-4 border-primary/20 shadow-2xl">
+                <AvatarImage src={Amartya} alt="Amartya Sen - Data Analyst" className="object-cover" />
                 <AvatarFallback className="text-2xl font-poppins font-bold bg-gradient-primary text-white">
                   AS
                 </AvatarFallback>
               </Avatar>
-              <div className="absolute -bottom-4 -right-4 w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center shadow-lg">
-                <BarChart3 className="h-8 w-8 text-white" />
+              <div className="absolute -bottom-4 -right-4 w-12 h-12 sm:w-14 sm:h-14 bg-gradient-primary rounded-full flex items-center justify-center shadow-lg">
+                <BarChart3 className="h-6 w-6 text-white" />
               </div>
             </div>
           </div>

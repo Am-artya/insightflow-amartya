@@ -26,24 +26,24 @@ const Hero = () => {
       }}
     >
       {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-hero"></div>
+      <div className="absolute inset-0 bg-gradient-hero dark:bg-gradient-to-br dark:from-background/90 dark:to-background/70"></div>
       
       {/* Content */}
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
         <div className="fade-in">
-          <h1 className="text-5xl md:text-7xl font-poppins font-bold text-white mb-6">
+          <h1 className="text-5xl md:text-7xl font-poppins font-bold text-white dark:text-foreground mb-6">
             Hi, I'm{" "}
-            <span className="bg-gradient-to-r from-white to-cyan-200 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-white to-cyan-200 dark:from-primary dark:to-secondary bg-clip-text text-transparent">
               Amartya Sen
             </span>
             👋
           </h1>
           
-          <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl text-white/90 dark:text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
             Aspiring Data Analyst | Turning Data into Insights
           </p>
           
-          <p className="text-lg text-white/80 mb-12 max-w-3xl mx-auto">
+          <p className="text-lg text-white/80 dark:text-muted-foreground mb-12 max-w-3xl mx-auto">
             I transform raw data into meaningful insights that drive smarter decisions. 
             Skilled in Python, SQL, Excel, and Power BI with a passion for uncovering 
             patterns that tell powerful stories.
@@ -71,16 +71,16 @@ const Hero = () => {
           <div className="mt-12 flex justify-center gap-6">
             <a
               href="mailto:amartyasen1927@gmail.com"
-              className="text-white/70 hover:text-white transition-colors duration-300"
+              className="text-white/70 dark:text-muted-foreground hover:text-white dark:hover:text-foreground transition-colors duration-300"
             >
               amartyasen1927@gmail.com
             </a>
-            <span className="text-white/50">|</span>
+            <span className="text-white/50 dark:text-muted-foreground">|</span>
             <a
               href="https://github.com/Am-artya"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white/70 hover:text-white transition-colors duration-300 flex items-center gap-2"
+              className="text-white/70 dark:text-muted-foreground hover:text-white dark:hover:text-foreground transition-colors duration-300 flex items-center gap-2"
             >
               <Github className="h-4 w-4" />
               GitHub
@@ -91,8 +91,8 @@ const Hero = () => {
       
       {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-white/70 rounded-full mt-2 animate-pulse"></div>
+        <div className="w-6 h-10 border-2 border-white/50 dark:border-foreground/50 rounded-full flex justify-center">
+          <div className="w-1 h-3 bg-white/70 dark:bg-foreground/70 rounded-full mt-2 animate-pulse"></div>
         </div>
       </div>
     </section>

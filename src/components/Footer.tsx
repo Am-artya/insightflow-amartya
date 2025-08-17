@@ -26,7 +26,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-foreground text-background py-12">
+    <footer className="bg-foreground dark:bg-card text-background dark:text-foreground py-12 border-t dark:border-border">`
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div className="mb-6 md:mb-0">
@@ -36,7 +36,7 @@ const Footer = () => {
             >
               Amartya Sen
             </button>
-            <p className="text-background/70 mt-2">
+            <p className="text-background/70 dark:text-muted-foreground mt-2">
               Aspiring Data Analyst | Turning Data into Insights
             </p>
           </div>
@@ -48,7 +48,7 @@ const Footer = () => {
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-background/70 hover:text-primary transition-colors duration-300 p-2 rounded-full hover:bg-background/10"
+                className="text-background/70 dark:text-muted-foreground hover:text-primary transition-colors duration-300 p-2 rounded-full hover:bg-background/10 dark:hover:bg-muted"
                 aria-label={link.label}
               >
                 {link.icon}
@@ -57,11 +57,11 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="mt-8 pt-8 border-t border-background/20 text-center">
-          <p className="text-background/70 flex items-center justify-center gap-2">
+        <div className="mt-8 pt-8 border-t border-background/20 dark:border-border text-center">
+          <p className="text-background/70 dark:text-muted-foreground flex items-center justify-center gap-2">
             Made with <Heart className="h-4 w-4 text-red-500" /> by Amartya Sen © {currentYear}
           </p>
-          <p className="text-background/50 text-sm mt-2">
+          <p className="text-background/50 dark:text-muted-foreground/70 text-sm mt-2">
             Ready to transform your data into meaningful insights
           </p>
         </div>

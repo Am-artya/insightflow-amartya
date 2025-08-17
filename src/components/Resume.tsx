@@ -3,14 +3,18 @@ import { Button } from "@/components/ui/button";
 import { Download, Eye, FileText, Award, Briefcase, GraduationCap } from "lucide-react";
 
 const Resume = () => {
+  // Drive links: view (share) + direct download via uc?export=download&id=...
+  const viewUrl = "https://drive.google.com/file/d/189D7j3e25KlWinJa6ZG3hdAmthGGZbHy/view?usp=drive_link";
+  const downloadUrl = "https://drive.google.com/uc?export=download&id=189D7j3e25KlWinJa6ZG3hdAmthGGZbHy";
+
   const handleDownloadResume = () => {
-    // In a real implementation, this would link to an actual PDF file
-    alert("Resume download will be available soon!");
+    // open direct download
+    window.open(downloadUrl, "_blank");
   };
 
   const handleViewResume = () => {
-    // In a real implementation, this would open the resume in a new tab
-    alert("Resume viewer will be available soon!");
+    // open view link
+    window.open(viewUrl, "_blank");
   };
 
   const resumeHighlights = [

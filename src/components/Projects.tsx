@@ -20,7 +20,7 @@ const Projects = () => {
       ],
       icon: <BarChart3 className="h-6 w-6" />,
       demoLink: "#",
-      githubLink: "#"
+      githubLink: "https://github.com/ankan-jna/infotact-project-1.git"
     },
     {
       title: "Customer Segmentation Using Clustering",
@@ -35,7 +35,7 @@ const Projects = () => {
       ],
       icon: <Users className="h-6 w-6" />,
       demoLink: "#",
-      githubLink: "#"
+      githubLink: "https://github.com/ankan-jna/infotact-project-2.git"
     }
   ];
 
@@ -63,7 +63,7 @@ const Projects = () => {
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-48 md:h-56 object-cover"
+                  className="w-full h-48 md:h-56 lg:h-48 object-cover sm:h-48"
                 />
                 <div className="absolute top-4 left-4">
                   <div className="w-12 h-12 bg-primary/90 backdrop-blur-sm rounded-full flex items-center justify-center text-white">

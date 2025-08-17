@@ -4,8 +4,8 @@ import { Download, Eye, FileText, Award, Briefcase, GraduationCap } from "lucide
 
 const Resume = () => {
   // Drive links: view (share) + direct download via uc?export=download&id=...
-  const viewUrl = "https://drive.google.com/file/d/189D7j3e25KlWinJa6ZG3hdAmthGGZbHy/view?usp=drive_link";
-  const downloadUrl = "https://drive.google.com/uc?export=download&id=189D7j3e25KlWinJa6ZG3hdAmthGGZbHy";
+  const viewUrl = "https://drive.google.com/file/d/1NKzFM4Q_ukSdCF56jDR3qOHGxc6ocNSY/view?usp=drive_link";
+  const downloadUrl = "https://drive.google.com/uc?export=download&id=1NKzFM4Q_ukSdCF56jDR3qOHGxc6ocNSY";
 
   const handleDownloadResume = () => {
     // open direct download

@@ -38,10 +38,14 @@ const Education = () => {
 
         <div className="space-y-8">
           {educationData.map((edu, index) => (
-            <Card key={index} className="p-8 slide-up hover:shadow-lg transition-all duration-300">
+            <Card 
+              key={index} 
+              className="p-8 slide-up hover:shadow-xl transition-all duration-300 hover:scale-[1.01]"
+              style={{ animationDelay: `${index * 0.1}s` }}
+            >
               <div className="flex flex-col md:flex-row md:items-center gap-6">
                 <div className="flex-shrink-0">
-                  <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center">
+                  <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center shadow-lg">
                     <GraduationCap className="h-8 w-8 text-white" />
                   </div>
                 </div>
@@ -51,22 +55,24 @@ const Education = () => {
                     <h3 className="font-poppins font-bold text-xl text-foreground mb-2 md:mb-0">
                       {edu.degree}
                     </h3>
-                    <div className="flex items-center gap-2 text-muted-foreground">
+                    <div className="flex items-center gap-2 text-muted-foreground bg-muted/50 px-3 py-1 rounded-full">
                       <Calendar className="h-4 w-4" />
                       <span className="font-medium">{edu.year}</span>
                     </div>
                   </div>
                   
-                  <p className="text-lg text-primary font-medium mb-2">
+                  <p className="text-lg text-primary font-medium mb-3">
                     {edu.institution}
                   </p>
                   
-                  <div className="flex items-center gap-2 mb-3">
+                  <div className="flex items-center gap-2 mb-4">
                     <Award className="h-4 w-4 text-accent" />
-                    <span className="font-medium text-accent">{edu.grade}</span>
+                    <span className="font-medium text-accent bg-accent/10 px-2 py-1 rounded-md text-sm">
+                      {edu.grade}
+                    </span>
                   </div>
                   
-                  <p className="text-muted-foreground">
+                  <p className="text-muted-foreground leading-relaxed">
                     {edu.description}
                   </p>
                 </div>

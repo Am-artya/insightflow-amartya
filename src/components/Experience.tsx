@@ -44,17 +44,21 @@ const Experience = () => {
 
         <div className="space-y-8">
           {experiences.map((exp, index) => (
-            <Card key={index} className="p-8 slide-up hover:shadow-lg transition-all duration-300">
+            <Card 
+              key={index} 
+              className="p-8 slide-up hover:shadow-xl transition-all duration-300 hover:scale-[1.01]"
+              style={{ animationDelay: `${index * 0.1}s` }}
+            >
               <div className="flex flex-col lg:flex-row gap-6">
                 <div className="flex-shrink-0">
-                  <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center">
+                  <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center shadow-lg">
                     <Briefcase className="h-8 w-8 text-white" />
                   </div>
                 </div>
                 
                 <div className="flex-grow">
-                  <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-                    <div>
+                  <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
+                    <div className="flex-grow">
                       <h3 className="font-poppins font-bold text-xl text-foreground mb-1">
                         {exp.role}
                       </h3>
@@ -63,23 +67,23 @@ const Experience = () => {
                       </p>
                     </div>
                     
-                    <div className="flex flex-col md:items-end gap-2 mt-2 md:mt-0">
-                      <div className="flex items-center gap-2 text-muted-foreground">
+                    <div className="flex flex-col gap-2 mt-2 md:mt-0 md:items-end">
+                      <div className="flex items-center gap-2 text-muted-foreground bg-muted/50 px-3 py-1 rounded-full">
                         <Calendar className="h-4 w-4" />
-                        <span className="font-medium">{exp.duration}</span>
+                        <span className="font-medium text-sm">{exp.duration}</span>
                       </div>
                       <div className="flex items-center gap-2 text-muted-foreground">
                         <MapPin className="h-4 w-4" />
-                        <span>{exp.location}</span>
+                        <span className="text-sm">{exp.location}</span>
                       </div>
                     </div>
                   </div>
                   
-                  <ul className="space-y-2 mb-6">
+                  <ul className="space-y-3 mb-6">
                     {exp.description.map((item, idx) => (
-                      <li key={idx} className="text-muted-foreground flex items-start gap-2">
+                      <li key={idx} className="text-muted-foreground flex items-start gap-3">
                         <span className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></span>
-                        {item}
+                        <span className="leading-relaxed">{item}</span>
                       </li>
                     ))}
                   </ul>

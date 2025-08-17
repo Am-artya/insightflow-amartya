@@ -55,7 +55,10 @@ const Projects = () => {
 
         <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
-            <Card key={index} className="project-card overflow-hidden bg-card">
+            <Card 
+              key={index} 
+              className="project-card overflow-hidden bg-card hover:shadow-xl transition-all duration-300 hover:scale-[1.02] flex flex-col h-full"
+            >
               <div className="relative">
                 <img
                   src={project.image}
@@ -69,12 +72,12 @@ const Projects = () => {
                 </div>
               </div>
               
-              <div className="p-6">
+              <div className="p-6 flex flex-col flex-grow">
                 <h3 className="font-poppins font-bold text-xl text-foreground mb-3">
                   {project.title}
                 </h3>
                 
-                <p className="text-muted-foreground mb-4 leading-relaxed">
+                <p className="text-muted-foreground mb-4 leading-relaxed flex-grow">
                   {project.description}
                 </p>
                 
@@ -102,7 +105,7 @@ const Projects = () => {
                   ))}
                 </div>
                 
-                <div className="flex gap-3">
+                <div className="flex gap-3 mt-auto">
                   <Button 
                     variant="default" 
                     size="sm" 

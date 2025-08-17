@@ -1,5 +1,7 @@
 import { Card } from "@/components/ui/card";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { BarChart3, TrendingUp, Database, Brain } from "lucide-react";
+import profilePhoto from "@/assets/profile-photo.jpg";
 
 const About = () => {
   const highlights = [
@@ -35,8 +37,24 @@ const About = () => {
           <div className="w-20 h-1 bg-gradient-primary mx-auto fade-in"></div>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="slide-up">
+        <div className="grid lg:grid-cols-3 gap-12 items-center">
+          {/* Profile Photo Section */}
+          <div className="lg:col-span-1 flex justify-center slide-up">
+            <div className="relative">
+              <Avatar className="w-64 h-64 border-4 border-primary/20 shadow-2xl">
+                <AvatarImage src={profilePhoto} alt="Amartya Sen - Data Analyst" className="object-cover" />
+                <AvatarFallback className="text-2xl font-poppins font-bold bg-gradient-primary text-white">
+                  AS
+                </AvatarFallback>
+              </Avatar>
+              <div className="absolute -bottom-4 -right-4 w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center shadow-lg">
+                <BarChart3 className="h-8 w-8 text-white" />
+              </div>
+            </div>
+          </div>
+
+          {/* About Text Section */}
+          <div className="lg:col-span-2 slide-up">
             <div className="prose prose-lg max-w-none">
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
                 I'm an aspiring <strong className="text-primary">Data Analyst</strong> with a strong foundation in 
@@ -58,17 +76,30 @@ const About = () => {
               </p>
             </div>
           </div>
+        </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 slide-up">
+        {/* Highlights Section */}
+        <div className="mt-16">
+          <h3 className="text-2xl font-poppins font-bold text-center text-foreground mb-8">
+            What I Bring to the Table
+          </h3>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 slide-up">
             {highlights.map((highlight, index) => (
-              <Card key={index} className="p-6 text-center hover:shadow-lg transition-all duration-300 hover:scale-105">
-                <div className="flex justify-center mb-4">
-                  {highlight.icon}
+              <Card 
+                key={index} 
+                className="p-6 text-center hover:shadow-lg transition-all duration-300 hover:scale-105 h-full flex flex-col justify-between"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div>
+                  <div className="flex justify-center mb-4">
+                    {highlight.icon}
+                  </div>
+                  <h4 className="font-poppins font-semibold text-lg mb-3">
+                    {highlight.title}
+                  </h4>
                 </div>
-                <h3 className="font-poppins font-semibold text-lg mb-3">
-                  {highlight.title}
-                </h3>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-sm text-muted-foreground leading-relaxed">
                   {highlight.description}
                 </p>
               </Card>
